@@ -19,12 +19,12 @@ var education = {
         "location": "nahan",
         "majors": ["science", "maths"],
         "degree": "higher studies",
-        "dates": 2015
+        "dates": "2015"
     }],
     "onlineCourses": [{
         "title": "into to html and css",
         "school": "udacity",
-        "dates": 2017,
+        "dates": "2017",
         "url": "www.udacity.com"
     }]
 };
@@ -48,7 +48,7 @@ var work = {
 var projects = {
     "projects": [{
         "title": "portfolio",
-        "dates": 2017,
+        "dates": "2017",
         "description": "A website, or simply site, is a collection of related web pages, including multimedia content, typically identified with a common domain name, and published on at least one web server. A website may be accessible via a public Internet Protocol (IP) network, such as the Internet, or a private local area network (LAN), by referencing a uniform resource locator (URL) that identifies the site.",
         "images": ["images/project1.jpg", "images/project2.jpg"]
     }]
@@ -89,15 +89,10 @@ bio.display = function() {
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts,#footerContacts").append(formattedLocation);
 
-
-
     var formattedMessege = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").append(formattedMessege);
     var formattedpic = HTMLbioPic.replace("%data%", bio.biopic);
     $("#header").append(formattedpic);
-
-
-
 
     if (bio.skills.length > 0) {
         $("#header").append(HTMLskillsStart);
